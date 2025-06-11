@@ -163,4 +163,19 @@ class TypedValue
 
         return $date;
     }
+
+    public function asArray(): array
+    {
+        $value = $this->asArrayOrNull();
+        Assert::notNull($value);
+
+        return $value;
+    }
+
+    public function asArrayOrNull(): ?array
+    {
+        Assert::nullOrIsArray($this->value);
+
+        return $this->value;
+    }
 }
