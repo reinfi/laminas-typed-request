@@ -1,0 +1,32 @@
+{
+    "name": "reinfi/laminas-typed-request",
+    "type": "library",
+    "description": "A Laminas Framework module to replace untyped request to solve static code analysis.",
+    "keywords": [
+        "laminas",
+        "http",
+        "request"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Reinfi"
+        }
+    ],
+    "require": {
+        "php": "~8.3.0 || ~8.4.0",
+        "laminas/laminas-stdlib": "^3.20",
+        "webmozart/assert": "^1.10",
+        "laminas/laminas-http": "^2.22"
+    },
+    "autoload": {
+        "psr-4": {
+            "Reinfi\\TypedRequest\\": "src/"
+        }
+    },
+    "extra": {
+        "zf": {
+            "component": "Reinfi\\TypedRequest"
+        }
+    }
+}
