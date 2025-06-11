@@ -22,7 +22,7 @@ class TypedRequest extends Request
      * @param mixed|null $default
      * @return ($name is null ? TypedParameters<array-key, mixed> : TypedValue)
      */
-    public function getQuery(?string $name = null, mixed $default = null): TypedValue|TypedParameters
+    public function getQuery($name = null, $default = null): TypedValue|TypedParameters
     {
         assert($this->queryParams instanceof TypedParameters);
 
